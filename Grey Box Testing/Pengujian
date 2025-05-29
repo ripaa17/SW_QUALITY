@@ -25,5 +25,3 @@
 - **Tes:** Input barang dengan variasi harga/jumlah, uji data nol/negatif.  
 - **Jenis Pengujian:** Logika perhitungan, validasi input, pengecekan penyimpanan transaksi.  
 - **Hasil:** Total tepat, data transaksi tersimpan, input tidak valid dicegah.
-
-
