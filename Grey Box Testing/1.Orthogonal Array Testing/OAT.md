@@ -3,7 +3,7 @@
   pengujian statistik yang sangat berguna ketika sistem yang akan diuji memiliki input data yang besar. Pengujian susunan ortogonal membantu memaksimalkan 
   cakupan pengujian dengan memasangkan dan menggabungkan input serta menguji sistem dengan
   jumlah kasus pengujian yang relatif lebih sedikit untuk menghemat waktu.
-  
+   
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
 ---
 pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi, yang dimana pengujian ini akan dibagi menjadi 3 level yaitu sebagai berikut :
