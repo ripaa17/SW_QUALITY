@@ -1,3 +1,9 @@
+# Pengujian Array Ortogonal (OAT) 
+  Pengujian Array Ortogonal (OAT)adalah teknik pengujian perangkat lunak yang menggunakan array ortogonal untuk membuat kasus uji. Ini adalah pendekatan
+  pengujian statistik yang sangat berguna ketika sistem yang akan diuji memiliki input data yang besar. Pengujian susunan ortogonal membantu memaksimalkan 
+  cakupan pengujian dengan memasangkan dan menggabungkan input serta menguji sistem dengan
+  jumlah kasus pengujian yang relatif lebih sedikit untuk menghemat waktu.
+  
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
 ---
 | Fitur                 | Faktor                    | Level 1         | Level 2          | Level 3          |
