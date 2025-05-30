@@ -5,7 +5,7 @@
   jumlah kasus pengujian yang relatif lebih sedikit untuk menghemat waktu.
   
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
-   pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi, yang dimana pengujian ini akan dibagi menjadi 3 level yaitu sebagai berikut :
+pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi, yang dimana pengujian ini akan dibagi menjadi 3 level yaitu sebagai berikut :
 | **Fitur**             | **Faktor**                     | **Level 1**                             | **Level 2**                         | **Level 3**                    |
 |----------------------|--------------------------------|-----------------------------------------|-------------------------------------|-------------------------------|
 | **Login**            | Username & Password            | Username dan password valid (terdaftar) | Username salah atau tidak terdaftar | Username atau password kosong |
