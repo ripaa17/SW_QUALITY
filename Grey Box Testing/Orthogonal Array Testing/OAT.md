@@ -6,10 +6,10 @@
   
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
 ---
-| Fitur                 | Faktor                    | Level 1         | Level 2          | Level 3          |
-| --------------------- | ------------------------- | --------------- | ---------------- | ---------------- |
-| **Login**             | Kombinasi Input Login     | Valid           | Password Salah   | Username Kosong  |
-| **Penambahan Barang** | Validasi Data Barang      | Lengkap & Valid | Harga Negatif    | Stok Kosong      |
+| Fitur                 | Faktor                    | Level 1                            | Level 2                         | Level 3                        |
+| --------------------- | ------------------------- | ---------------------------------- | ------------------------------- | ------------------------------ |
+| **Login**             | Username & Password       | username yang terdaftar di database| username salah atau tidak ada   | Username atau password Kosong  |
+| **Penambahan Barang** | Nama,kode,harga & jumlah Barang      | Lengkap & Valid | Harga Negatif    | Stok Kosong      |
 | **Penambahan User**   | Role & Input User         | Admin Valid     | Kasir Tanpa Nama | Role Tidak Valid |
 | **Transaksi**         | Jenis & Jumlah Pembayaran | Tunai - 1 Item  | Kartu - 5 Item   | QRIS - >10 Item  |
 ---
