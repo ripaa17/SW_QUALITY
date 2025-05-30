@@ -14,7 +14,7 @@
 | **Transaksi**         | Jenis & Jumlah Pembayaran | Tunai - 1 Item  | Kartu - 5 Item   | QRIS - >10 Item  |
 ---
 📋 TABEL ORTHOGONAL ARRAY (L9)
-| TC# | Login           | Barang          | User             | Transaksi       |
+| TC | Login           | Barang          | User             | Transaksi       |
 | --- | --------------- | --------------- | ---------------- | --------------- |
 | TC1 | Valid           | Lengkap & Valid | Admin Valid      | Tunai - 1 Item  |
 | TC2 | Valid           | Harga Negatif   | Kasir Tanpa Nama | Kartu - 5 Item  |
