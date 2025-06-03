@@ -1,1 +1,4 @@
-
+| Bagian | Path                   | Code                                                                 | Jalur                                                                 |
+|--------|------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|
+| A      | Sudah Login sebagai Admin | <br>`if (isset($_SESSION["role"])) { $role = $_SESSION["role"]; if ($role == "Admin") { header("location:admin/home.php"); } }` | 1. Cek `isset($_SESSION["role"])`<br>2. Jika true, cek `role == "Admin"`<br>3. Jika true, redirect ke `admin/home.php` |
+| A      | Sudah Login sebagai User  | `else { header("Location: user/lapangan.php"); }`                   | 1. Cek `isset($_SESSION["role"])`<br>2. Jika true, cek `role == "Admin"`<br>3. Jika false, redirect ke `user/lapangan.php` |
