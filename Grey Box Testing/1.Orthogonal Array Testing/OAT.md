@@ -20,6 +20,12 @@ pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penam
 | 7  | Login Kasir dengan username benar tapi password salah    | Username: Dede, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 | 8  | Login Kasir dengan username salah dan password benar     | Username: Dodi, Password: 098765                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 | 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ❌     |
+--
+Total Pengujian: 9
+Berhasil (✅): 6
+Gagal (❌): 3
+Catatan:
+Semua pengujian dengan input yang benar dinyatakan berhasil. Namun, ada 3 skenario gagal (input kosong) yang belum divalidasi dengan benar oleh sistem.
 ---
 ### Pengujian Pada Penambahan Barang
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok | Status Uji                                |
@@ -34,5 +40,43 @@ pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penam
 | TC8 | B0040  | Minyak             | 22000  | 10           | ❌ Gagal (harga negatif)                   |
 | TC9 | B0088  | Salak Buah         | 5000   | 10           | ✅ Berhasil (data valid)                   |
 ---
-
-
+Total Pengujian: 9
+Berhasil (✅): 3
+Gagal (❌): 6
+Catatan:
+Validasi input pada penambahan barang cukup ketat, dan sistem berhasil menolak banyak input tidak valid (duplikat, harga nol/negatif, karakter khusus, nama kosong, kode kosong). Namun, hal ini menunjukkan kebutuhan validasi sistem sudah cukup baik.
+--
+### Tabel Pengujian Pada Penambahan User
+| TC  | Username | Password | Role Akses | Hasil yang Diharapkan                                     | Status |
+|-----|----------|----------|-------------|------------------------------------------------------------|--------|
+| TC1 | Eva      | 123456   | Admin       | Berhasil login dan masuk ke dashboard Admin                | ✅     |
+| TC2 | Eva      | 098765   | Admin       | Gagal login (password salah)                               | ✅     |
+| TC3 | Eva      | 123456   | Kasir       | Gagal login (role tidak sesuai)                            | ✅     |
+| TC4 | Dede     | 098765   | Kasir       | Berhasil login dan masuk ke halaman transaksi Kasir        | ✅     |
+| TC5 | Dede     | 121212   | Kasir       | Gagal login (password salah)                               | ✅     |
+| TC6 | Dede     | 098765   | Admin       | Gagal login (role tidak sesuai)                            | ✅     |
+| TC7 | Rahma    | 121212   | Kasir       | Berhasil login dan masuk ke halaman transaksi Kasir        | ✅     |
+| TC8 | Rahma    | 123456   | Kasir       | Gagal login (password salah)                               | ✅     |
+| TC9 | Rahma    | 121212   | Admin       | Gagal login (role tidak sesuai)                            | ✅     |
+---
+Total Pengujian: 9
+Berhasil (✅): 9
+Gagal (❌): 0
+Catatan:
+Semua test case login berdasarkan kombinasi username, password, dan role berhasil tervalidasi sesuai ekspektasi.
+--
+### Tabel Pengujian Fitur Pembayaran Transaksi
+| TC  | Nama Barang | Harga | Qty | Total | Bayar     | Kembalian yang Diharapkan | Hasil yang Diharapkan               | Status |
+|-----|-------------|--------|-----|--------|-----------|-----------------------------|--------------------------------------|--------|
+| TC1 | Sapu Lidi   | 10,000 | 1   | 10,000 | 20,000     | 10,000                      | Transaksi berhasil, kembalian benar | ✅     |
+| TC2 | Sapu Lidi   | 10,000 | 1   | 10,000 | 5,000      | -                           | Gagal, pembayaran kurang            | ❌     |
+| TC3 | Sapu Lidi   | 10,000 | 1   | 10,000 | 10,000     | 0                           | Transaksi berhasil tanpa kembalian  | ✅     |
+| TC4 | Sapu Lidi   | 10,000 | 1   | 10,000 | 0          | -                           | Gagal, nominal bayar tidak valid     | ❌     |
+| TC5 | Sapu Lidi   | 10,000 | 1   | 10,000 | (kosong)   | -                           | Gagal, input pembayaran wajib diisi  | ❌     |
+| TC6 | Sapu Lidi   | 10,000 | 1   | 10,000 | teks: "abc"| -                           | Gagal, input bayar harus numerik     | ❌     |
+--
+Total Pengujian: 6
+Berhasil (✅): 2
+Gagal (❌): 4
+Catatan:
+Sistem hanya berhasil memproses pembayaran yang valid secara numerik dan mencukupi. Validasi pada input kosong, teks, dan nominal tidak mencukupi belum tertangani dengan baik, perlu perbaikan pada sisi input dan validasi pembayaran.
