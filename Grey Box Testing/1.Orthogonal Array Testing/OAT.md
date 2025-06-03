@@ -5,6 +5,7 @@
   jumlah kasus pengujian yang relatif lebih sedikit untuk menghemat waktu.
    
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
+--
 pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi.
 ---
 ## Tabel Pengujian Fitur Login (Admin & Kasir) 
