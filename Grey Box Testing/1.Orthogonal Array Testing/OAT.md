@@ -8,13 +8,16 @@
 ---
 pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi.
 ---
-**Pengujian pada Fitur Login
----
-| No | Skenario Pengujian                          | Test Case                                                              | Hasil yang Diharapkan                                              | Status |
-|----|---------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------|--------|
-| 1  | Login Admin dengan Username & Password      | Username: Eva, Password: 123456                                        | Admin berhasil login dan masuk ke dashboard admin                 | ✅     |
-| 2  | Login Admin tapi password salah             | Username: Eva, Password: 654321                                        | Sistem menolak login, pesan: "Username dan Password Salah"        | ❌     |
-| 3  | Login Admin dengan QR Code saat offline     | Admin memindai QR Code saat koneksi terputus                          | Sistem menampilkan error: "Koneksi tidak tersedia"                | ✅     |
-| 4  | Login Kasir dengan Username & Password      | Username dan password valid, koneksi lambat                           | Kasir berhasil login dengan sedikit delay                         | ✅     |
-| 5  | Login Kasir dengan PIN saat koneksi terputus| Kasir login menggunakan PIN tanpa koneksi                             | Sistem menampilkan pesan gagal login akibat koneksi               | ✅     |
-| 6  | Login Kasir dengan QR Code saat koneksi normal| Kasir login dengan QR Code dalam kondisi normal                       | Kasir berhasil login ke halaman transaksi                         | ✅     |
+## ✅ Tabel Pengujian Fitur Login (Admin & Kasir) 
+| No | Skenario Pengujian                                       | Test Case                                               | Hasil yang Diharapkan                                                   | Status |
+|----|----------------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------|--------|
+| 1  | Login Admin dengan username dan password benar           | Username: Eva, Password: 123456                          | Admin berhasil login dan masuk ke dashboard admin                      | ✅     |
+| 2  | Login Admin dengan username benar tapi password salah    | Username: Eva, Password: 654321                          | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
+| 3  | Login Admin dengan username kosong dan password terisi   | Username: (kosong), Password: 123456                     | Sistem menampilkan pesan: "Username belum diisi"                       | ✅     |
+| 4  | Login Admin dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menampilkan pesan: "Harap isi username dan password"            | ✅     |
+| 5  | Login Admin dengan username salah dan password benar     | Username: Eeva, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
+| 6  | Login Kasir dengan username dan password benar           | Username: Dede, Password: 098765                         | Kasir berhasil login ke halaman transaksi                              | ✅     |
+| 7  | Login Kasir dengan username benar tapi password salah    | Username: Dede, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
+| 8  | Login Kasir dengan username salah dan password benar     | Username: Dodi, Password: 098765                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
+| 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menampilkan pesan: "Harap isi username dan password"            | ✅     |
+
