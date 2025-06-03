@@ -1,4 +1,7 @@
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| No | Nama Fungsi / Modul | Jalur Pengujian | Input yang Diuji       | Output yang Diharapkan          | Status |
+|----|----------------------|------------------|------------------------|----------------------------------|--------|
+| 1  | Login                | 1 → 2 → 3        | Username & Password valid | Redirect ke dashboard            | Lulus  |
+| 2  | Login                | 1 → 2 → 4        | Username salah          | Tampil pesan error login gagal  | Lulus  |
+| 3  | Tambah Data Lapangan| 1 → 2 → 5 → 6    | Form diisi lengkap      | Data tersimpan di database      | Lulus  |
+| 4  | Tambah Data Lapangan| 1 → 2 → 5 → 7    | Form kosong             | Tampil pesan validasi           | Lulus  |
+| 5  | Logout               | 1 → 8 → 9        | Klik tombol logout      | Sesi berakhir, redirect ke login| Lulus  |
