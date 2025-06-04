@@ -23,14 +23,14 @@
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok | Hasil yang Diharapkan           | Status |
 |-----|--------|--------------------|--------|-------------|--------------------------------|--------|
 | TC1 | B0059  | Bola Basket Besar  | 60000  | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC2 | B0055  | Sabun Mandi        | 2500   | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC3 | B0054  | Pasta Gigi         | 2000   | 20          | Berhasil tambah barang (valid) | ✅     |
-| TC4 | B0053  | Sampoo Botol 350ml | 16000  | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC5 | B0056  | Balsem             | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC6 | B0052  | Sapu Lidi          | 10000  | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC7 | B0051  | Sandal             | 12000  | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC8 | B0040  | Minyak             | 22000  | 10          | Berhasil tambah barang (valid) | ✅     |
-| TC9 | B0088  | Salak Buah         | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC2 | B0057  | Sabun Mandi        | 2500   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC3 | B0055  | Pasta Gigi         | 2000   | 20          | Berhasil tambah barang (valid) | ✅     |
+| TC4 | B0054  | Sampoo Botol 350ml | 16000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC5 | B0053  | Balsem             | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC6 | B0056  | Sapu Lidi          | 10000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC7 | B0052  | Sandal             | 12000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC8 | B0051  | Minyak             | 22000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC9 | B0040  | Salak Buah         | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
 ---
 
 
