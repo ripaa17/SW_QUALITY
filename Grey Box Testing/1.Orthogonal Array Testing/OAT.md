@@ -133,13 +133,13 @@ Semua test case login berdasarkan kombinasi username, password, dan role berhasi
 | TC  | Kode   | Nama Barang         | Harga  | Qty | Total   | Bayar   | Kembalian yang Diharapkan | Hasil yang Diharapkan           | Status |
 |-----|--------|---------------------|--------|-----|---------|---------|-----------------------------|----------------------------------|--------|
 | TC1 | B0059  | Bola Basket Besar   | 60000  | 1   | 60000   | 70000   | 10000                       | Transaksi berhasil              | ✅     |
-| TC2 | B0055  | Sabun Mandi         | 2500   | 1   | 2500    | 2500    | 0                           | Transaksi berhasil              | ✅     |
-| TC3 | B0054  | Pasta Gigi          | 2000   | 1   | 2000    | 5000    | 3000                        | Transaksi berhasil              | ✅     |
-| TC4 | B0053  | Sampoo Botol 350ml  | 16000  | 1   | 16000   | 20000   | 4000                        | Transaksi berhasil              | ✅     |
-| TC5 | B0056  | Balsem              | 5000   | 1   | 5000    | 4000    | -                           | Gagal: Uang bayar tidak cukup   | ✅     |
-| TC6 | B0052  | Sapu Lidi           | 10000  | 0   | 0       | 10000   | -                           | Gagal: Qty tidak boleh 0        | ✅     |
-| TC7 | B0051  | Sandal              | 12000  | -1  | -12000  | 12000   | -                           | Gagal: Qty tidak valid          | ✅     |
-| TC8 | B0040  | Minyak              | 22000  | 1   | 22000   | abc     | -                           | Gagal: Input bayar tidak valid  | ✅     |
-| TC9 | B0088  | Salak Buah          | 5000   | 1   | 5000    | 5000    | 0                           | Transaksi berhasil              | ✅     |
+| TC2 | B0057  | Sabun Mandi         | 2500   | 1   | 2500    | 2500    | 0                           | Transaksi berhasil              | ✅     |
+| TC3 | B0055  | Pasta Gigi          | 2000   | 1   | 2000    | 5000    | 3000                        | Transaksi berhasil              | ✅     |
+| TC4 | B0054  | Sampoo Botol 350ml  | 16000  | 1   | 16000   | 20000   | 4000                        | Transaksi berhasil              | ✅     |
+| TC5 | B0053  | Balsem              | 5000   | 1   | 5000    | 4000    | -                           | Gagal: Uang bayar tidak cukup   | ✅     |
+| TC6 | B0056  | Sapu Lidi           | 10000  | 0   | 0       | 10000   | -                           | Gagal: Qty tidak boleh 0        | ✅     |
+| TC7 | B0052  | Sandal              | 12000  | -1  | -12000  | 12000   | -                           | Gagal: Qty tidak valid          | ✅     |
+| TC8 | B0051  | Minyak              | 22000  | 1   | 22000   | abc     | -                           | Gagal: Input bayar tidak valid  | ✅     |
+| TC9 | B0040  | Salak Buah          | 5000   | 1   | 5000    | 5000    | 0                           | Transaksi berhasil              | ✅     |
 ---
 Dari 9 test case yang diuji, sistem berhasil menangani berbagai kondisi transaksi dengan baik, termasuk pembayaran yang cukup, kembalian, dan validasi input. Semua skenario berjalan sesuai harapan dengan hasil 100% berhasil (✅ semua). Fitur pembayaran dinyatakan berfungsi dengan baik dan stabil.
