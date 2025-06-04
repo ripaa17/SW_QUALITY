@@ -25,8 +25,7 @@
 - Kode Barang  
 - Nama Barang  
 - Harga Barang  
-- Stok Barang  
-- Satuan  
+- Stok Barang 
 
 **Kondisi Pengujian:**  
 - Semua field diisi dengan benar → Barang berhasil ditambahkan.  
@@ -65,174 +64,67 @@
 - Total < 0 → Error / input tidak valid.  
 - Bayar = Total → Transaksi berhasil, kembalian 0.  
 
-# Membuat Tabel Matrix Testing
+# Matrix Testing
 
 ---
 
 ## 🔐 1. Fitur Login
+## Matrix Testing Fitur Login (Admin & Kasir)
 
-| No | Username        | Password       | Role          | Expected Result                    |
-|-----|-----------------|----------------|---------------|----------------------------------|
-| 1   | Valid           | Valid          | Admin         | Berhasil login                   |
-| 2   | Valid           | Valid          | Kasir         | Berhasil login                   |
-| 3   | Valid           | Valid          | Tidak dipilih | Gagal login / peringatan         |
-| 4   | Valid           | Salah          | Admin         | Gagal login                     |
-| 5   | Valid           | Salah          | Kasir         | Gagal login                     |
-| 6   | Tidak terdaftar | Valid          | Admin         | Gagal login                     |
-| 7   | Tidak terdaftar | Salah          | Kasir         | Gagal login                     |
-| 8   | Kosong          | Kosong         | Kosong        | Gagal login / wajib isi           |
-
+| No | Username    | Password | Role  | Hasil yang diharapkan                                         | Status |
+|-----|-------------|----------|-------|---------------------------------------------------------------|--------|
+| 1   | Eva         | 123456   | Admin | Admin berhasil login dan masuk ke dashboard admin             | ✅     |
+| 2   | Eva         | 654321   | Admin | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 3   | (kosong)    | 123456   | Admin | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 4   | (kosong)    | (kosong) | Admin | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 5   | Eeva        | 123456   | Admin | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 6   | Dede        | 098765   | Kasir | Kasir berhasil login ke halaman transaksi                      | ✅     |
+| 7   | Dede        | 123456   | Kasir | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 8   | Dodi        | 098765   | Kasir | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
+| 9   | (kosong)    | (kosong) | Kasir | Sistem menolak login, tampilkan pesan: "Username dan Password salah" | ✅     |
 ---
 
 ## 📦 2. Fitur Penambahan Barang
-
-| No | Kode Barang     | Nama Barang    | Harga Barang  | Stok Barang      | Satuan     | Expected Result                   |
-|-----|-----------------|----------------|---------------|------------------|------------|----------------------------------|
-| 1   | Valid unik      | Valid          | > 0           | Valid angka      | Valid      | Barang berhasil ditambahkan       |
-| 2   | Kosong          | Valid          | > 0           | Valid angka      | Valid      | Gagal tambah / error              |
-| 3   | Valid unik      | Kosong         | > 0           | Valid angka      | Valid      | Gagal tambah / error              |
-| 4   | Valid unik      | Valid          | 0 / negatif   | Valid angka      | Valid      | Gagal simpan (harga tidak valid) |
-| 5   | Valid unik      | Valid          | > 0           | Kosong / huruf   | Valid      | Gagal / error input stok          |
-| 6   | Duplikat kode   | Valid          | > 0           | Valid angka      | Valid      | Gagal (kode barang duplikat)     |
-
+| TC  | Kode   | Nama               | Harga  | Jumlah Stok | Hasil yang Diharapkan           | Status |
+|-----|--------|--------------------|--------|-------------|--------------------------------|--------|
+| TC1 | B0059  | Bola Basket Besar  | 60000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC2 | B0055  | Sabun Mandi        | 2500   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC3 | B0054  | Pasta Gigi         | 2000   | 20          | Berhasil tambah barang (valid) | ✅     |
+| TC4 | B0053  | Sampoo Botol 350ml | 16000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC5 | B0056  | Balsem             | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC6 | B0052  | Sapu Lidi          | 10000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC7 | B0051  | Sandal             | 12000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC8 | B0040  | Minyak             | 22000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC9 | B0088  | Salak Buah         | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
 ---
 
 ## 👤 3. Fitur Penambahan User
-
-| No | Username        | Password           | Role           | Expected Result                  |
-|-----|-----------------|--------------------|----------------|--------------------------------|
-| 1   | Valid unik      | ≥ 6 karakter       | Admin / Kasir  | User berhasil ditambahkan       |
-| 2   | Kosong          | Valid              | Admin / Kasir  | Gagal / error                  |
-| 3   | Sudah ada       | Valid              | Admin / Kasir  | Gagal / error                  |
-| 4   | Valid unik      | Kosong / < 6 karakter | Admin / Kasir | Ditolak                       |
-| 5   | Valid unik      | Valid              | Tidak dipilih  | Gagal tambah / warning         |
+| TC  | Username | Password | Role Akses | Hasil yang Diharapkan                                     | Status |
+|-----|----------|----------|-------------|------------------------------------------------------------|--------|
+| TC1 | Eva      | 123456   | Admin       | Berhasil login dan masuk ke dashboard Admin                | ✅     |
+| TC2 | Eva      | 098765   | Admin       | Gagal login (password salah)                               | ✅     |
+| TC3 | Eva      | 123456   | Kasir       | Gagal login (role tidak sesuai)                            | ✅     |
+| TC4 | Dede     | 098765   | Kasir       | Berhasil login dan masuk ke halaman transaksi Kasir        | ✅     |
+| TC5 | Dede     | 121212   | Kasir       | Gagal login (password salah)                               | ✅     |
+| TC6 | Dede     | 098765   | Admin       | Gagal login (role tidak sesuai)                            | ✅     |
+| TC7 | Rahma    | 121212   | Kasir       | Berhasil login dan masuk ke halaman transaksi Kasir        | ✅     |
+| TC8 | Rahma    | 123456   | Kasir       | Gagal login (password salah)                               | ✅     |
+| TC9 | Rahma    | 121212   | Admin       | Gagal login (role tidak sesuai)                            | ✅     |
 
 ---
 
 ## 💰 4. Fitur Transaksi
+| TC  | Kode   | Nama Barang         | Harga  | Qty | Total   | Bayar   | Kembalian yang Diharapkan | Hasil yang Diharapkan           | Status |
+|-----|--------|---------------------|--------|-----|---------|---------|-----------------------------|----------------------------------|--------|
+| TC1 | B0059  | Bola Basket Besar   | 60000  | 1   | 60000   | 70000   | 10000                       | Transaksi berhasil              | ✅     |
+| TC2 | B0055  | Sabun Mandi         | 2500   | 1   | 2500    | 2500    | 0                           | Transaksi berhasil              | ✅     |
+| TC3 | B0054  | Pasta Gigi          | 2000   | 1   | 2000    | 5000    | 3000                        | Transaksi berhasil              | ✅     |
+| TC4 | B0053  | Sampoo Botol 350ml  | 16000  | 1   | 16000   | 20000   | 4000                        | Transaksi berhasil              | ✅     |
+| TC5 | B0056  | Balsem              | 5000   | 1   | 5000    | 4000    | -                           | Gagal: Uang bayar tidak cukup   | ✅     |
+| TC6 | B0052  | Sapu Lidi           | 10000  | 0   | 0       | 10000   | -                           | Gagal: Qty tidak boleh 0        | ✅     |
+| TC7 | B0051  | Sandal              | 12000  | -1  | -12000  | 12000   | -                           | Gagal: Qty tidak valid          | ✅     |
+| TC8 | B0040  | Minyak              | 22000  | 1   | 22000   | abc     | -                           | Gagal: Input bayar tidak valid  | ✅     |
+| TC9 | B0088  | Salak Buah          | 5000   | 1   | 5000    | 5000    | 0                           | Transaksi berhasil              | ✅     |
 
-| No | Kode Barang     | Jumlah Beli (Qty) | Harga          | Total          | Uang Bayar        | Expected Result                    |
-|-----|-----------------|-------------------|----------------|----------------|-------------------|----------------------------------|
-| 1   | Valid           | > 0               | Valid          | Valid          | ≥ Total           | Transaksi berhasil, kembalian ditampilkan |
-| 2   | Valid           | 0 / negatif       | Valid          | Valid          | Valid             | Gagal transaksi                   |
-| 3   | Valid           | Valid             | Valid          | Negatif        | Valid             | Error / input tidak valid         |
-| 4   | Valid           | Valid             | Valid          | Valid          | < Total           | Gagal: Uang kurang                |
-| 5   | Valid           | Valid             | Valid          | Valid          | Kosong / bukan angka | Error input                   |
-| 6   | Valid           | Valid             | Valid          | Valid          | = Total           | Transaksi berhasil, kembalian 0  |
 
-# Hasil Test Case
-
----
-
-## 🔐 1. Fitur Login
-
-| No | Username        | Password       | Role          | Expected Result                    | Status Pengujian |
-|-----|-----------------|----------------|---------------|----------------------------------|------------------|
-| 1   | Valid           | Valid          | Admin         | Berhasil login                   | ✅               |
-| 2   | Valid           | Valid          | Kasir         | Berhasil login                   | ✅               |
-| 3   | Valid           | Valid          | Tidak dipilih | Gagal login / peringatan         | ❌               |
-| 4   | Valid           | Salah          | Admin         | Gagal login                     | ❌               |
-| 5   | Valid           | Salah          | Kasir         | Gagal login                     | ❌               |
-| 6   | Tidak terdaftar | Valid          | Admin         | Gagal login                     | ❌               |
-| 7   | Tidak terdaftar | Salah          | Kasir         | Gagal login                     | ❌               |
-| 8   | Kosong          | Kosong         | Kosong        | Gagal login / wajib isi           | ❌               |
-
----
-
-## 📦 2. Fitur Penambahan Barang
-
-| No | Kode Barang     | Nama Barang    | Harga Barang  | Stok Barang      | Satuan     | Expected Result                   | Status Pengujian |
-|-----|-----------------|----------------|---------------|------------------|------------|----------------------------------|------------------|
-| 1   | Valid unik      | Valid          | > 0           | Valid angka      | Valid      | Barang berhasil ditambahkan       | ✅               |
-| 2   | Kosong          | Valid          | > 0           | Valid angka      | Valid      | Gagal tambah / error              | ❌               |
-| 3   | Valid unik      | Kosong         | > 0           | Valid angka      | Valid      | Gagal tambah / error              | ❌               |
-| 4   | Valid unik      | Valid          | 0 / negatif   | Valid angka      | Valid      | Gagal simpan (harga tidak valid) | ❌               |
-| 5   | Valid unik      | Valid          | > 0           | Kosong / huruf   | Valid      | Gagal / error input stok          | ❌               |
-| 6   | Duplikat kode   | Valid          | > 0           | Valid angka      | Valid      | Gagal (kode barang duplikat)     | ❌               |
-
----
-
-## 👤 3. Fitur Penambahan User
-
-| No | Username        | Password           | Role           | Expected Result                  | Status Pengujian |
-|-----|-----------------|--------------------|----------------|--------------------------------|------------------|
-| 1   | Valid unik      | ≥ 6 karakter       | Admin / Kasir  | User berhasil ditambahkan       | ✅               |
-| 2   | Kosong          | Valid              | Admin / Kasir  | Gagal / error                  | ❌               |
-| 3   | Sudah ada       | Valid              | Admin / Kasir  | Gagal / error                  | ❌               |
-| 4   | Valid unik      | Kosong / < 6 karakter | Admin / Kasir | Ditolak                       | ❌               |
-| 5   | Valid unik      | Valid              | Tidak dipilih  | Gagal tambah / warning         | ❌               |
-
----
-
-## 💰 4. Fitur Transaksi
-
-| No | Kode Barang     | Jumlah Beli (Qty) | Harga          | Total          | Uang Bayar        | Expected Result                    | Status Pengujian |
-|-----|-----------------|-------------------|----------------|----------------|-------------------|----------------------------------|------------------|
-| 1   | Valid           | > 0               | Valid          | Valid          | ≥ Total           | Transaksi berhasil, kembalian ditampilkan | ✅               |
-| 2   | Valid           | 0 / negatif       | Valid          | Valid          | Valid             | Gagal transaksi                   | ❌               |
-| 3   | Valid           | Valid             | Valid          | Negatif        | Valid             | Error / input tidak valid         | ❌               |
-| 4   | Valid           | Valid             | Valid          | Valid          | < Total           | Gagal: Uang kurang                | ❌               |
-| 5   | Valid           | Valid             | Valid          | Valid          | Kosong / bukan angka | Error input                   | ❌               |
-| 6   | Valid           | Valid             | Valid          | Valid          | = Total           | Transaksi berhasil, kembalian 0  | ✅               |
-
-# 🧪 Analisa Hasil Test
-| No | Fitur                  | Test Case Gagal | Penyebab Kegagalan Utama                              | Rekomendasi Perbaikan                                                                 |
-|----|------------------------|-----------------|--------------------------------------------------------|----------------------------------------------------------------------------------------|
-| 1  | Login                  | 3, 4, 5, 6, 7, 8 | Role tidak dipilih, password salah, akun tidak terdaftar, input kosong | Tambahkan validasi role wajib, pesan kesalahan spesifik, validasi input kosong        |
-| 2  | Penambahan Barang      | 2, 3, 4, 5, 6    | Field kosong, harga/stok tidak valid, kode duplikat    | Validasi semua field wajib diisi, input numerik positif, cek duplikasi kode           |
-| 3  | Penambahan User        | 2, 3, 4, 5       | Username kosong atau duplikat, password kurang dari 6 karakter, role tidak dipilih | Validasi panjang password, cek username unik, role wajib dipilih                      |
-| 4  | Transaksi              | 2, 3, 4, 5       | Qty = 0/negatif, total negatif, uang bayar kurang, input bukan angka | Validasi Qty > 0, hitung total dari Qty × Harga, uang bayar harus angka & ≥ total    |
-
----
-
-## 🔧 Detail Rekomendasi Per Fitur
-
-### 1. Login
-
-| Masalah                        | Solusi                                                                 |
-|-------------------------------|------------------------------------------------------------------------|
-| Role tidak dipilih             | Tambahkan validasi agar role wajib dipilih sebelum login              |
-| Password salah / akun tak ada | Tampilkan pesan: "Password salah" / "Akun tidak ditemukan"            |
-| Field kosong                   | Validasi frontend agar semua field wajib diisi                        |
-
----
-
-### 2. Penambahan Barang
-
-| Masalah                           | Solusi                                                                 |
-|----------------------------------|------------------------------------------------------------------------|
-| Kode / nama barang kosong        | Validasi wajib isi semua field                                        |
-| Harga 0 atau negatif             | Validasi harga harus > 0                                              |
-| Stok kosong / bukan angka        | Validasi input hanya angka dan tidak boleh kosong                     |
-| Kode barang duplikat             | Tambahkan pengecekan kode barang sebelum simpan                       |
-
----
-
-### 3. Penambahan User
-
-| Masalah                            | Solusi                                                                 |
-|-----------------------------------|------------------------------------------------------------------------|
-| Username kosong / sudah ada       | Validasi username unik dan tidak boleh kosong                         |
-| Password < 6 karakter             | Validasi panjang minimal 6 karakter                                   |
-| Role tidak dipilih                | Validasi agar role wajib dipilih sebelum menyimpan                    |
-
----
-
-### 4. Transaksi
-
-| Masalah                               | Solusi                                                                 |
-|--------------------------------------|------------------------------------------------------------------------|
-| Qty = 0 atau negatif                  | Validasi Qty harus > 0                                                 |
-| Total negatif                        | Periksa kembali rumus perhitungan Total                                |
-| Uang bayar < total                   | Tambahkan validasi: "Uang tidak cukup"                                 |
-| Uang bayar kosong / bukan angka      | Validasi input uang bayar harus angka dan tidak boleh kosong           |
-
----
-
-## ✅ Tindak Lanjut
-
-- Lakukan **perbaikan sistem** sesuai rekomendasi di atas.
-- **Uji ulang** semua test case yang sebelumnya gagal.
-- **Perbarui status** pada tabel test case sesuai hasil pengujian terbaru.
-- Dokumentasikan hasil test ulang sebagai versi baru pengujian.
 
