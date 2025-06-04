@@ -8,39 +8,99 @@
 --
 pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi.
 ---
-## Tabel Pengujian Fitur Login (Admin & Kasir) 
-| No | Skenario Pengujian                                       | Test Case                                               | Hasil yang Diharapkan                                                   | Status |
-|----|----------------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------|--------|
-| 1  | Login Admin dengan username dan password benar           | Username: Eva, Password: 123456                          | Admin berhasil login dan masuk ke dashboard admin                      | ✅     |
-| 2  | Login Admin dengan username benar tapi password salah    | Username: Eva, Password: 654321                          | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 3  | Login Admin dengan username kosong dan password terisi   | Username: (kosong), Password: 123456                     | Sistem menolak login, tampilkan pesan: "Username dan Password salah"                         | ✅     |
-| 4  | Login Admin dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"             | ✅     |
-| 5  | Login Admin dengan username salah dan password benar     | Username: Eeva, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 6  | Login Kasir dengan username dan password benar           | Username: Dede, Password: 098765                         | Kasir berhasil login ke halaman transaksi                              | ✅     |
-| 7  | Login Kasir dengan username benar tapi password salah    | Username: Dede, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 8  | Login Kasir dengan username salah dan password benar     | Username: Dodi, Password: 098765                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
+# 🧪 Orthogonal Array Testing (OAT) – Faktor & Level
+
+Dokumen ini berisi daftar **faktor dan level** dari 4 fitur yang diuji dalam sistem: **Login, Penambahan Barang, Penambahan User, dan Pembayaran Transaksi**. Teknik pengujian menggunakan pendekatan **Orthogonal Array (OAT)** untuk efisiensi pengujian kombinatorial.
 
 ---
-Total Pengujian: 9
-Berhasil (✅): 9
-Gagal (❌): 0
-Catatan:
-Status ✅ menunjukkan bahwa sistem memberikan respons sesuai ekspektasi pengujian, baik itu berhasil login maupun penolakan login dengan pesan yang tepat. Tidak ditemukan bug atau penyimpangan pada logika validasi login.
+
+## 🔐 Fitur Login
+
+| Faktor     | Level 1 | Level 2 | Level 3               |
+|------------|---------|---------|------------------------|
+| Username   | Valid   | Salah   | Kosong                 |
+| Password   | Valid   | Salah   | Kosong                 |
+| Role       | Admin   | Kasir   | Tidak Diisi / Kosong   |
+
+---
+
+## 📦 Fitur Penambahan Barang
+
+| Faktor         | Level 1         | Level 2         | Level 3             |
+|----------------|------------------|------------------|----------------------|
+| Kode Barang     | Unik (Valid)     | Duplikat         | Kosong               |
+| Nama Barang     | Valid            | Kosong           | Karakter khusus      |
+| Harga           | Valid (> 0)      | Nol (0)          | Negatif              |
+| Jumlah Stok     | Valid (> 0)      | Nol (0)          | Negatif              |
+
+---
+
+## 👤 Fitur Penambahan User
+
+| Faktor     | Level 1   | Level 2     | Level 3                  |
+|------------|------------|-------------|---------------------------|
+| Username   | Unik       | Sudah Ada   | Kosong                    |
+| Password   | Valid      | Kosong      | Pendek (<6 karakter)     |
+| Role Akses | Admin      | Kasir       | Tidak Diisi / Kosong      |
+
+---
+
+## 💳 Fitur Pembayaran Transaksi
+
+| Faktor              | Level 1           | Level 2           | Level 3               |
+|---------------------|--------------------|--------------------|------------------------|
+| Qty (Jumlah Beli)   | Valid (> 0)        | Nol (0)            | Negatif (-1)          |
+| Bayar (Uang Masuk)  | Cukup              | Tidak Cukup        | Tidak Valid (Non-angka)|
+| Harga Barang        | Valid (> 0)        | Nol (0)            | Negatif               |
+| Total Harga         | Sesuai Perhitungan | Tidak Sesuai       | Kosong                |
+
+---
+
+> 📝 **Catatan Umum:**
+> - Pengujian dengan array ortogonal memungkinkan cakupan kombinasi yang efisien dan mewakili semua pasangan penting antar faktor.
+> - Cocok diterapkan untuk sistem dengan banyak input kombinasi.
+> - Dapat dikembangkan lebih lanjut untuk L9, L27, atau bentuk array lainnya sesuai jumlah faktor dan level.
+
+---
+
+
+## ✅ Tabel Pengujian Login (Implementasi OAT)
+
+| TC   | Username   | Password   | Role     | Hasil yang Diharapkan                                      | Status |
+|------|------------|------------|----------|-------------------------------------------------------------|--------|
+| TC1  | Eva        | 123456     | Admin    | Login berhasil ke dashboard admin                           | ✅     |
+| TC2  | Eva        | salahpw    | Kasir    | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC3  | Eva        | (kosong)   | (kosong) | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC4  | Eeva       | 123456     | Kasir    | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC5  | Eeva       | salahpw    | (kosong) | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC6  | Eeva       | (kosong)   | Admin    | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC7  | (kosong)   | 123456     | (kosong) | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC8  | (kosong)   | salahpw    | Admin    | Gagal login: "Username dan Password salah"                  | ✅     |
+| TC9  | (kosong)   | (kosong)   | Kasir    | Gagal login: "Username dan Password salah"                  | ✅     |
+
+---
+
+## 📝 Catatan
+
+- **Metode:** Orthogonal Array Testing menggunakan array **L9**.
+- **Faktor diuji:** `Username`, `Password`, dan `Role`.
+- **Tujuan:** Mengurangi jumlah test case sambil tetap mencakup semua kombinasi *pairwise* yang penting.
+- **Efisiensi:** Dari 27 kombinasi (3×3×3), hanya diuji 9 kombinasi mewakili cakupan maksimum.
+- **Hasil:** Semua test case berjalan sesuai ekspektasi. Validasi input login berfungsi dengan baik.
+
 ---
 ### Pengujian Pada Penambahan Barang
-| TC  | Kode   | Nama               | Harga  | Jumlah Stok | Status Uji                                |
-|-----|--------|--------------------|--------|--------------|--------------------------------------------|
-| TC1 | B0059  | Bola Basket Besar  | 60000  | 10           | ✅ Berhasil (data valid)                   |
-| TC2 | B0055  | Sabun Mandi        | 2500   | 10           | ✅ Berhasil (data valid)      |
-| TC3 | B0054  | Pasta Gigi         | 2000   | 20           | ✅ Berhasil (data valid)                      |
-| TC4 | B0053  | Sampoo Botol 350ml | 16000  | 10           | ✅ Berhasil (data valid)  |
-| TC5 | B0056  | Balsem             | 5000   | 10           | ✅ Berhasil (data valid)                        |
-| TC6 | B0052  | Sapu Lidi          | 10000  | 10           | ✅ Berhasil (data valid)                   |
-| TC7 | B0051  | Sandal             | 12000  | 10           | ✅ Berhasil (data valid)                   |
-| TC8 | B0040  | Minyak             | 22000  | 10           | ✅ Berhasil (data valid)                   |
-| TC9 | B0088  | Salak Buah         | 5000   | 10           | ✅ Berhasil (data valid)                   |
-
+| TC  | Kode   | Nama               | Harga  | Jumlah Stok | Hasil yang Diharapkan           | Status |
+|-----|--------|--------------------|--------|-------------|--------------------------------|--------|
+| TC1 | B0059  | Bola Basket Besar  | 60000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC2 | B0055  | Sabun Mandi        | 2500   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC3 | B0054  | Pasta Gigi         | 2000   | 20          | Berhasil tambah barang (valid) | ✅     |
+| TC4 | B0053  | Sampoo Botol 350ml | 16000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC5 | B0056  | Balsem             | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC6 | B0052  | Sapu Lidi          | 10000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC7 | B0051  | Sandal             | 12000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC8 | B0040  | Minyak             | 22000  | 10          | Berhasil tambah barang (valid) | ✅     |
+| TC9 | B0088  | Salak Buah         | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
 ---
 Total Pengujian: 9
 Berhasil (✅): 9
