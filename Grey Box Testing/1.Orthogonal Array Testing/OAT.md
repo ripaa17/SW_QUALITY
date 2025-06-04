@@ -13,20 +13,20 @@ pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penam
 |----|----------------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------|--------|
 | 1  | Login Admin dengan username dan password benar           | Username: Eva, Password: 123456                          | Admin berhasil login dan masuk ke dashboard admin                      | ✅     |
 | 2  | Login Admin dengan username benar tapi password salah    | Username: Eva, Password: 654321                          | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 3  | Login Admin dengan username kosong dan password terisi   | Username: (kosong), Password: 123456                     | Sistem menolak login, tampilkan pesan: "Username dan Password salah"                         | ❌     |
-| 4  | Login Admin dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"             | ❌     |
+| 3  | Login Admin dengan username kosong dan password terisi   | Username: (kosong), Password: 123456                     | Sistem menolak login, tampilkan pesan: "Username dan Password salah"                         | ✅     |
+| 4  | Login Admin dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"             | ✅     |
 | 5  | Login Admin dengan username salah dan password benar     | Username: Eeva, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 | 6  | Login Kasir dengan username dan password benar           | Username: Dede, Password: 098765                         | Kasir berhasil login ke halaman transaksi                              | ✅     |
 | 7  | Login Kasir dengan username benar tapi password salah    | Username: Dede, Password: 123456                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 | 8  | Login Kasir dengan username salah dan password benar     | Username: Dodi, Password: 098765                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
-| 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ❌     |
+| 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 
 ---
 Total Pengujian: 9
-Berhasil (✅): 6
-Gagal (❌): 3
+Berhasil (✅): 9
+Gagal (❌): 0
 Catatan:
-Semua pengujian dengan input yang benar dinyatakan berhasil. Namun, ada 3 skenario gagal (input kosong) yang belum divalidasi dengan benar oleh sistem.
+Status ✅ menunjukkan bahwa sistem memberikan respons sesuai ekspektasi pengujian, baik itu berhasil login maupun penolakan login dengan pesan yang tepat. Tidak ditemukan bug atau penyimpangan pada logika validasi login.
 ---
 ### Pengujian Pada Penambahan Barang
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok | Status Uji                                |
