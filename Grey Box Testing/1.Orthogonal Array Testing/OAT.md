@@ -21,7 +21,7 @@ pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penam
 | 8  | Login Kasir dengan username salah dan password benar     | Username: Dodi, Password: 098765                         | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ✅     |
 | 9  | Login Kasir dengan username dan password kosong          | Username: (kosong), Password: (kosong)                   | Sistem menolak login, tampilkan pesan: "Username dan Password salah"   | ❌     |
 
----
+
 Total Pengujian: 9
 Berhasil (✅): 6
 Gagal (❌): 3
@@ -41,7 +41,7 @@ Semua pengujian dengan input yang benar dinyatakan berhasil. Namun, ada 3 skenar
 | TC8 | B0040  | Minyak             | 22000  | 10           | ❌ Gagal (harga negatif)                   |
 | TC9 | B0088  | Salak Buah         | 5000   | 10           | ✅ Berhasil (data valid)                   |
 
----
+
 Total Pengujian: 9
 Berhasil (✅): 3
 Gagal (❌): 6
@@ -61,7 +61,7 @@ Validasi input pada penambahan barang cukup ketat, dan sistem berhasil menolak b
 | TC8 | Rahma    | 123456   | Kasir       | Gagal login (password salah)                               | ✅     |
 | TC9 | Rahma    | 121212   | Admin       | Gagal login (role tidak sesuai)                            | ✅     |
 
----
+
 Total Pengujian: 9
 Berhasil (✅): 9
 Gagal (❌): 0
@@ -78,7 +78,7 @@ Semua test case login berdasarkan kombinasi username, password, dan role berhasi
 | TC5 | Sapu Lidi   | 10,000 | 1   | 10,000 | (kosong)   | -                           | Gagal, input pembayaran wajib diisi  | ❌     |
 | TC6 | Sapu Lidi   | 10,000 | 1   | 10,000 | teks: "abc"| -                           | Gagal, input bayar harus numerik     | ❌     |
 
---
+
 Total Pengujian: 6
 Berhasil (✅): 2
 Gagal (❌): 4
