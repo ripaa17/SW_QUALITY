@@ -19,7 +19,7 @@
 - Stok barang kosong atau huruf → Gagal / error input.  
 - Kode barang sama dengan yang sudah ada → Gagal (duplikat).  
 ---
-## 📦 2. Fitur Penambahan Barang
+## 📦 Fitur Penambahan Barang
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok | Hasil yang Diharapkan           | Status |
 |-----|--------|--------------------|--------|-------------|--------------------------------|--------|
 | TC1 | B0059  | Bola Basket Besar  | 60000  | 10          | Berhasil tambah barang (valid) | ✅     |
