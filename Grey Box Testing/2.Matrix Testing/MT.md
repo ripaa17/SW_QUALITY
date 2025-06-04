@@ -1,3 +1,9 @@
+## Matrix Testing
+**Matrix Testing** adalah teknik pengujian perangkat lunak yang sistematis dan terstruktur untuk
+ menguji berbagai kombinasi input dan kondisi dalam suatu aplikasi. Teknik ini membantu
+ mengidentifikasi bug yang disebabkan oleh interaksi antara parameter atau faktor yang berbeda
+ dalam aplikasi.
+
 # 🧪 Matriks Pengujian (Testing Matrix)
 
 | TC   | Login           | Barang          | User             | Transaksi       | Output yang Diharapkan      | Status Uji     |
