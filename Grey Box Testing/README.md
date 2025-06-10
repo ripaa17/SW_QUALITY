@@ -13,23 +13,6 @@
 Berikut adalah beberapa model atau teknik umum yang digunakan dalam Gray Box Testing:
 
 ### 🔹 1. **Orthogonal Array Testing**
-- Menguji hubungan antara modul internal dan spesifikasi eksternal.
-- Berguna untuk mengidentifikasi area sensitif terhadap perubahan kode.
-
 ### 🔹 2. **Matrix Testing**
-- Menguji kembali fungsi-fungsi yang telah diuji sebelumnya setelah ada perubahan kode.
-- Penting dalam pemeliharaan aplikasi kasir untuk memastikan update tidak merusak fitur lama.
-
 ### 🔹 3. **Pattern Testing**
-- Menggunakan pola desain software (design pattern) untuk mengidentifikasi kelemahan atau cacat.
-- Misalnya: validasi penggunaan pola MVC pada struktur aplikasi kasir.
-
 ### 🔹 4. **Regression Testing**
-- Menguji kombinasi input dan kondisi sistem dengan pendekatan statistik.
-- Cocok untuk pengujian konfigurasi data barang atau transaksi yang kompleks.
-
-
-> Dengan penerapan Gray Box Testing pada aplikasi kasir, pengujian menjadi lebih efektif karena menggabungkan pemahaman internal sistem dan skenario nyata dari sudut pandang pengguna.
-
-
-
