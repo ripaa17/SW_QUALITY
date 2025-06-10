@@ -44,14 +44,6 @@
 
 ---
 
-## 📝 Catatan
-
-- **Metode:** Orthogonal Array Testing menggunakan array **L9**.
-- **Faktor diuji:** `Username`, `Password`, dan `Role`.
-- **Tujuan:** Mengurangi jumlah test case sambil tetap mencakup semua kombinasi *pairwise* yang penting.
-- **Efisiensi:** Dari 27 kombinasi (3×3×3), hanya diuji 9 kombinasi mewakili cakupan maksimum.
-- **Hasil:** Semua test case berjalan sesuai ekspektasi. Validasi input login berfungsi dengan baik.
-
 ---
 ### Pengujian Pada Penambahan Barang
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok |
@@ -66,8 +58,3 @@
 | TC8 | B0051  | Minyak             | 22000  | 10          | 
 | TC9 | B0040  | Salak Buah         | 5000   | 10          | 
 ---
-Total Pengujian: 9
-Berhasil (✅): 9
-Gagal (❌): 0
-Catatan:
-Dari 9 pengujian yang dilakukan dengan data valid, seluruhnya berhasil ✅. Hal ini menunjukkan bahwa sistem dapat menambahkan barang dengan benar saat input sesuai. Untuk memastikan sistem lebih kuat, pengujian dengan data tidak valid (seperti kode duplikat, harga nol, atau nama kosong) juga perlu dilakukan.
