@@ -33,5 +33,6 @@
 | TC9 | B0040  | Salak Buah         | 5000   | 10          | Berhasil tambah barang (valid) | ✅     |
 ---
 
+![Tampilan setelah pengujian berhasil](/MT penambahan barang.png)
 
 
