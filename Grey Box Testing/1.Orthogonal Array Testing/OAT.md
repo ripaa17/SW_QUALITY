@@ -5,12 +5,8 @@
   jumlah kasus pengujian yang relatif lebih sedikit untuk menghemat waktu.
    
 🧩 FAKTOR & LEVEL UNTUK SETIAP FITUR
---
-pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi.
----
 # 🧪 Orthogonal Array Testing (OAT) – Faktor & Level
 ---
-
 ## 🔐 Fitur Login
 
 | Faktor     | Level 1 | Level 2 | Level 3               |
