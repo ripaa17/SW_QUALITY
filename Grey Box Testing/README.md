@@ -1,6 +1,6 @@
 ## 🧪 Deskripsi Gray Box Testing — Aplikasi Kasir 
 
-**Gray Box Testing** adalah metode pengujian perangkat lunak yang menggabungkan pendekatan White Box dan Black Box. Penguji memiliki pengetahuan sebagian tentang struktur internal aplikasi dan menggunakan informasi tersebut untuk merancang pengujian yang menyeluruh. Pada aplikasi kasir ini, Gray Box Testing difokuskan pada 4 fitur utama :
+**Gray Box Testing** merupakan metode pengujian perangkat lunak yang menggabungkan pendekatan White Box dan Black Box, di mana penguji memiliki pengetahuan sebagian terhadap struktur internal sistem. Metode ini memungkinkan pengujian dilakukan secara lebih menyeluruh karena memanfaatkan baik informasi fungsional maupun struktur kode. Pada aplikasi kasir, Gray Box Testing difokuskan pada empat fitur utama, yaitu :
 ### 1️⃣ Fitur Login  
 ### 2️⃣ Fitur Menambahkan Barang  
 ### 3️⃣ Fitur Menambahkan User  
