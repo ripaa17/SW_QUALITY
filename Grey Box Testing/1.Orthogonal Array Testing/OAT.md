@@ -9,9 +9,6 @@
 pada tahap ini terdapat beberapa faktor yang akan  diuji dari fitur login, penambahan barang, penambahan user, dan transaksi.
 ---
 # 🧪 Orthogonal Array Testing (OAT) – Faktor & Level
-
-Dokumen ini berisi daftar **faktor dan level** dari 4 fitur yang diuji dalam sistem: **Login, Penambahan Barang, Penambahan User, dan Pembayaran Transaksi**. Teknik pengujian menggunakan pendekatan **Orthogonal Array (OAT)** untuk efisiensi pengujian kombinatorial.
-
 ---
 
 ## 🔐 Fitur Login
