@@ -8,28 +8,21 @@
 # 🧪 Orthogonal Array Testing (OAT) – Faktor & Level
 ---
 ## 🔐 Fitur Login
-
 | Faktor     | Level 1 | Level 2 | Level 3               |
 |------------|---------|---------|------------------------|
 | Username   | Valid   | Salah   | Kosong                 |
 | Password   | Valid   | Salah   | Kosong                 |
 | Role       | Admin   | Kasir   | Tidak Diisi / Kosong   |
-
 ---
-
 ## 📦 Fitur Penambahan Barang
-
 | Faktor         | Level 1         | Level 2         | Level 3             |
 |----------------|------------------|------------------|----------------------|
 | Kode Barang     | Unik (Valid)     | Duplikat         | Kosong               |
 | Nama Barang     | Valid            | Kosong           | Karakter khusus      |
 | Harga           | Valid (> 0)      | Nol (0)          | Negatif              |
 | Jumlah Stok     | Valid (> 0)      | Nol (0)          | Negatif              |
-
 ---
-
 ## Tabel Pengujian Login (Implementasi OAT)
-
 | TC   | Username   | Password   | Role     |
 |------|------------|------------|----------|
 | TC1  | Eva        | 123456     | Admin    | 
@@ -41,9 +34,6 @@
 | TC7  | (kosong)   | 123456     | (kosong) | 
 | TC8  | (kosong)   | salahpw    | Admin    | 
 | TC9  | (kosong)   | (kosong)   | Kasir    | 
-
----
-
 ---
 ### Pengujian Pada Penambahan Barang
 | TC  | Kode   | Nama               | Harga  | Jumlah Stok |
