@@ -1,8 +1,7 @@
-# Aplikasi Kasir (Versi 1) Sederhana Menggunakan Php + Mysql + Bootstrap
+# Aplikasi Kasir Retail menggunakan Bootstap dan Mysql
 
-Dibuat dalam studi kasus Toko Modern yang menggunakan barcode.
-
-Aplikasi ini benar benar cocok untuk pemula yang mau belajar PHP dan Mysql dari dasar.
+##Deskripsi Aplikasi Kasir Retail 🛒
+Aplikasi kasir retail adalah sistem perangkat lunak yang dirancang untuk membantu proses transaksi penjualan di toko retail. Aplikasi ini menggantikan sistem kasir manual dengan sistem digital yang lebih efisien, cepat, dan akurat. Umumnya digunakan di toko-toko seperti minimarket, butik, toko elektronik, toko kelontong, hingga swalayan modern.
 
 ## Tutorial ada di youtube
 <p>Eps 1 => https://www.youtube.com/watch?v=a8aQbhu64Cc</p>
