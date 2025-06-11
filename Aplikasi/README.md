@@ -12,6 +12,11 @@ Aplikasi kasir retail adalah sistem perangkat lunak yang dirancang untuk membant
 ### 5. Manajemen Pengguna📋
 ### 6. Diskon💯
 
+## Manfaat Aplikasi Kasir Retail:
+1. Mempercepat proses transaksi dan mengurangi antrian.
+2. Mengurangi risiko kesalahan input data secara manual.
+3. Membantu pemilik usaha dalam mengambil keputusan berbasis data.
+4. Mempermudah pencatatan keuangan dan audit internal.
 
 ## Tutorial ada di youtube
 <p>Eps 1 => https://www.youtube.com/watch?v=a8aQbhu64Cc</p>
