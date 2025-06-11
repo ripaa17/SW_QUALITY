@@ -1,9 +1,4 @@
 # Pengujian Regression Testing
-
-## Jenis Pengujian
-**Regression Testing**
-
-## Deskripsi Pengujian
 Pengujian dilakukan untuk memastikan bahwa perbaikan bug dan gangguan pada XAMPP berhasil memungkinkan sistem menampilkan **Cetak Barcode** pada fitur **List Barang** setelah proses penambahan data barang pada aplikasi web kasir.
 
 ## Langkah-Langkah Pengujian
