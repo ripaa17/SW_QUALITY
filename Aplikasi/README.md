@@ -44,3 +44,8 @@ Aplikasi kasir retail adalah sistem perangkat lunak yang dirancang untuk membant
 
 
 Klik channel saya untuk lebih banyak lagi video tutorial
+
+## Tampilan Aplikasi Kasir Retail berbasis WEB
+
+![image](https://github.com/user-attachments/assets/db74a149-0ea3-4148-968b-12d554e8e803)
+
