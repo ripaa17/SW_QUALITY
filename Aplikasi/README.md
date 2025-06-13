@@ -75,4 +75,12 @@ Klik channel saya untuk lebih banyak lagi video tutorial
 
 ![image](https://github.com/user-attachments/assets/2aaccbc1-db7d-4553-bc62-20e440500c96)
 
+![image](https://github.com/user-attachments/assets/489367ea-a49a-4afa-a5f0-95035f086d8d)
+
+![image](https://github.com/user-attachments/assets/99cc54ba-913f-4edd-b390-7e433127ddb4)
+
+![image](https://github.com/user-attachments/assets/fb136822-7aa0-44ac-a060-2fbf1382461d)
+
+![image](https://github.com/user-attachments/assets/93c82687-079d-4766-ba52-7b9111db209b)
+
 
