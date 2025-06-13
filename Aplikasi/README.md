@@ -6,6 +6,8 @@ Aplikasi kasir retail adalah sistem perangkat lunak yang dirancang untuk membant
 
 ## Fitur Utama 
 ### 1. Manajemen Produk🗒️
+    - Input dan update data produk (nama, harga, stok, kategori).
+    - Barcode scanner support untuk memudahkan pencatatan barang.
 ### 2. Transaksi Pnejualan💰
 ### 3. Stock & Inventaris🪣
 ### 4. Laporan Penjualan📓
