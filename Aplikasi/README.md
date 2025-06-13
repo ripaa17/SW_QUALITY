@@ -49,3 +49,30 @@ Klik channel saya untuk lebih banyak lagi video tutorial
 
 ![image](https://github.com/user-attachments/assets/db74a149-0ea3-4148-968b-12d554e8e803)
 
+![image](https://github.com/user-attachments/assets/bc82337d-0257-45e4-8e99-ceb2fd29faea)
+
+![image](https://github.com/user-attachments/assets/8dd46c09-0a3f-4b50-ac27-e11d976f0612)
+
+![image](https://github.com/user-attachments/assets/6f4e4d66-8ad1-4920-9b46-afa52f32a969)
+
+![image](https://github.com/user-attachments/assets/6ae7c05b-18e2-40d1-b00c-7b9976c3f512)
+
+![image](https://github.com/user-attachments/assets/c4b77b6f-a1d5-467a-ae05-26ede6084b16)
+
+![image](https://github.com/user-attachments/assets/a23ffc34-a230-4368-9aa2-2a706f5a8e22)
+
+![image](https://github.com/user-attachments/assets/8de1fb36-9314-44f9-af5d-865c5dee0763)
+
+![image](https://github.com/user-attachments/assets/36f3b843-48ce-4d23-8495-2714002c58be)
+
+![image](https://github.com/user-attachments/assets/c1ea33d9-f7b4-4ca5-900d-69222993edb9)
+
+![image](https://github.com/user-attachments/assets/d863bdbc-6492-4164-a3bb-66a71452adb1)
+
+![image](https://github.com/user-attachments/assets/aa2ae8d0-cdab-43af-8c77-655689fd86d9)
+
+![image](https://github.com/user-attachments/assets/108f1338-a1ec-4603-8bf0-855ea2814ab1)
+
+![image](https://github.com/user-attachments/assets/2aaccbc1-db7d-4553-bc62-20e440500c96)
+
+
