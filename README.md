@@ -13,10 +13,10 @@ Pengujian perangkat lunak dilakukan untuk memastikan bahwa aplikasi:
 - Sesuai dengan kebutuhan pengguna.
 
 Metode pengujian yang digunakan:
-1. Pembuatan Software (Aplikasi Web)
-2. White Box Testing
-3. Black Box Testing
-4. Gray Box Testing
+1. Pembuatan Software (Saripah)
+2. White Box Testing (Salsabila Rosnie)
+3. Black Box Testing (Aliya Tazkiya Fajriyati)
+4. Gray Box Testing (Neng Eva Masliah)
 
 ---
 
