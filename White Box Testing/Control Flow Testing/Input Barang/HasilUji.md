@@ -1,7 +1,1 @@
-| Test Case ID | Kondisi Yang Diuji                                                                 | Hasil Yang Diharapkan                                                                                   | Hasil Aktual | Status |
-|--------------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------------|--------|
-| TC-001       | Fungsi `add_produk()` dipanggil                                                     | Fungsi mengeksekusi langkah-langkah pengecekan kategori dan insert data produk ke database             | Sesuai       | ✅     |
-| TC-002       | `mysqli_num_rows($result_cek_kategori) > 0` (kategori ditemukan)                    | Data produk ditambahkan ke database, fungsi return > 0                                                 | Sesuai       | ✅     |
-| TC-003       | `mysqli_num_rows($result_cek_kategori) == 0` (kategori tidak ditemukan)             | Fungsi tidak memasukkan data produk, tidak return nilai (atau return 0)                                 | Sesuai       | ✅     |
-| TC-004       | Koneksi DB gagal / query gagal (`mysqli_query` error)                               | Fungsi berhenti atau return error                                                                        | Sesuai       | ✅     |
-| TC-005       | Salah satu field input kosong (misalnya `$stok = ""`)                               | Query tetap dijalankan—penanganan dikembalikan ke validasi form, bukan di fungsi ini                   | Sesuai       | ✅     |
+
