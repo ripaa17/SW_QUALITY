@@ -32,4 +32,14 @@ File ini digunakan untuk mencetak bukti transaksi (struk) setelah proses pembaya
 
 ## 🧾 Contoh Output Struk
 
+---
 
+## 🛠 Saran Perbaikan
+
+- Tambahkan validasi jika `idtrx` tidak ditemukan (redirect atau tampilkan pesan error).
+- Tambahkan tombol *kembali* jika tidak ingin otomatis cetak.
+- Gunakan template HTML atau CSS eksternal agar lebih konsisten saat dicetak.
+- Tambahkan logo toko (opsional).
+- Perlu sanitasi parameter `$_GET` agar aman dari SQL Injection (gunakan prepared statement).
+
+---
