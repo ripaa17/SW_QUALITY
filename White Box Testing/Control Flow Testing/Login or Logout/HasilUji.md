@@ -1,43 +1,71 @@
-# ✅ Test Case - Halaman Login (`login.php`)
+# ✅ Test Case - Modul Login, Logout & Daftar Barang
 
-Halaman ini mendokumentasikan hasil pengujian dari halaman login yang dibuat dengan HTML, PHP, dan Bootstrap, termasuk fitur spinner loading dan validasi awal.
+Dokumen ini mencatat hasil pengujian dari halaman login, logout, serta daftar barang dalam sistem manajemen data berbasis PHP + Bootstrap.
 
 ---
 
-## 📌 Tujuan
-Melakukan pengujian pada halaman login untuk memastikan fungsi form, interaksi pengguna, tampilan, dan feedback error berjalan sebagaimana mestinya.
+## 📌 Modul yang Diuji
+
+- Login (`login.php`)
+- Logout (`logout.php`)
+- Daftar Barang (`barang_list.php`)
+- Notifikasi Flash (`$_SESSION['error']`, `$_SESSION['success']`)
 
 ---
 
 ## 🧪 Daftar Test Case
 
-| No | Nama Pengujian            | Kondisi yang Diuji                     | Data Uji                                     | Hasil yang Diharapkan                                                              | Status        |
-|----|---------------------------|----------------------------------------|----------------------------------------------|-------------------------------------------------------------------------------------|---------------|
-| 1  | Tampil Form Login         | Akses halaman `login.php`              | -                                            | Form login tampil dengan field Username, Password, checkbox, dan tombol Sign In     | ✅ Passed      |
-| 2  | Spinner Loading           | Saat halaman dimuat                    | -                                            | Spinner muncul selama 2.5 detik, kemudian hilang otomatis                           | ✅ Passed      |
-| 3  | Username Kosong           | Input kosong pada field username       | Username: *(kosong)* <br> Password: `admin`  | Muncul pesan bahwa username harus diisi *(belum tersedia)*                          | ⚠️ Perlu Validasi |
-| 4  | Password Kosong           | Input kosong pada field password       | Username: `admin` <br> Password: *(kosong)*  | Muncul pesan bahwa password harus diisi *(belum tersedia)*                          | ⚠️ Perlu Validasi |
-| 5  | Login Gagal               | Username/password salah                | Username: `salah` <br> Password: `salah123`  | Alert merah muncul dengan pesan dari `$_SESSION['error']`                           | ✅ Passed      |
-| 6  | Login Berhasil            | Username/password benar (valid)        | Username: `admin` <br> Password: `admin123`  | Berhasil login dan redirect ke dashboard (tidak dapat diuji tanpa backend)          | ⚠️ Belum Diuji |
-| 7  | Checkbox "Sudah"          | Checkbox muncul di form login          | -                                            | Checkbox dengan label “Sudah” tampil di bawah input password                        | ✅ Passed      |
-| 8  | Reset Error Session       | Uji `$_SESSION['error']` setelah gagal | Dua kali login gagal                         | Pesan error hanya muncul sekali, lalu `$_SESSION['error']` dikosongkan              | ✅ Passed      |
+### 🔐 Login
+
+| No | Nama Pengujian          | Kondisi yang Diuji                     | Data Uji                                   | Hasil yang Diharapkan                                                                   | Status        |
+|----|-------------------------|----------------------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|---------------|
+| 1  | Tampilkan Form Login    | Akses `login.php`                      | -                                          | Form login tampil lengkap (username, password, tombol, checkbox "Sudah")                | ✅ Passed      |
+| 2  | Spinner Loading         | Saat halaman dimuat                    | -                                          | Spinner muncul selama 2.5 detik lalu hilang                                              | ✅ Passed      |
+| 3  | Login Gagal             | Akun salah                             | Username: `salah` <br>Password: `salah123` | Muncul pesan alert merah dari `$_SESSION['error']`, lalu dikosongkan setelah tampil     | ✅ Passed      |
+| 4  | Login Berhasil          | Akun valid                             | Username: `admin` <br>Password: `admin123` | Redirect ke halaman daftar barang (dashboard)                                            | ⚠️ Belum Diuji Backend |
+| 5  | Username Kosong         | Username dikosongkan                   | Username: *(kosong)* <br> Password: `xxx`  | Muncul validasi input kosong *(tidak ada validasi saat ini)*                             | ⚠️ Perlu Validasi |
+| 6  | Password Kosong         | Password dikosongkan                   | Username: `xxx` <br> Password: *(kosong)*  | Muncul validasi input kosong *(tidak ada validasi saat ini)*                             | ⚠️ Perlu Validasi |
+| 7  | Checkbox “Sudah”        | Checkbox tampil                        | -                                          | Checkbox dengan label “Sudah” tampil                                                    | ✅ Passed      |
 
 ---
 
-## 💬 Catatan Tambahan
+### 🚪 Logout
 
-- Spinner loading menggunakan JavaScript `setTimeout` selama 2,5 detik.
-- Error login ditangani oleh PHP menggunakan `$_SESSION['error']`.
-- Tidak ada validasi input kosong di sisi klien (JavaScript atau HTML5).
-- Desain mengikuti tema dark dari Bootstrap 4.5.
+| No | Nama Pengujian          | Kondisi yang Diuji     | Data Uji         | Hasil yang Diharapkan                                  | Status    |
+|----|-------------------------|------------------------|------------------|--------------------------------------------------------|-----------|
+| 1  | Logout dari sistem      | Klik `logout.php`      | -                | Session dihapus, redirect ke login                     | ✅ Passed  |
+| 2  | Akses halaman setelah logout | Setelah logout akses `barang_list.php` | - | Dialihkan kembali ke halaman login (jika ada session check) | ⚠️ Cek Session |
 
 ---
 
-## 🔧 Rekomendasi Perbaikan
+### 📦 Daftar Barang
 
-- Tambahkan validasi `required` pada input username dan password.
-- Gunakan JavaScript untuk memvalidasi form sebelum dikirim ke server.
-- Pastikan login backend menggunakan hashing password dan prepared statement.
-- Terapkan sistem keamanan tambahan seperti CAPTCHA dan limit login attempt.
+| No | Nama Pengujian          | Kondisi yang Diuji                     | Data Uji                             | Hasil yang Diharapkan                                                                | Status    |
+|----|-------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------|-----------|
+| 1  | Tampilkan Tabel Barang  | Akses `barang_list.php`               | -                                    | Semua data barang tampil dalam tabel                                                 | ✅ Passed  |
+| 2  | Flash Success Message   | Setelah tambah/edit/hapus barang      | `$_SESSION['success'] = 'Data berhasil'` | Muncul alert hijau lalu tidak tampil ulang setelah reload                        | ✅ Passed  |
+| 3  | Tombol Tambah Barang    | Klik tombol "Tambah data"             | -                                    | Redirect ke `/barang_add.php`                                                        | ✅ Passed  |
+| 4  | Tombol Cetak Barcode    | Klik tombol "Cetak Barcode"           | -                                    | Redirect ke `/barang_cetak_barcode.php`                                              | ✅ Passed  |
+| 5  | Aksi Edit Barang        | Klik link "Edit"                      | ID barang: `102`                     | Redirect ke `/barang_edit.php?id=102`                                                | ✅ Passed  |
+| 6  | Aksi Hapus Barang       | Klik link "Hapus" dan konfirmasi "ya" | ID barang: `102`                     | Barang terhapus dari database, muncul pesan sukses                                   | ✅ Passed  |
+| 7  | Konfirmasi Saat Hapus   | Klik link "Hapus"                     | -                                    | Muncul popup JavaScript `confirm("apakah anda yakin?")`                              | ✅ Passed  |
+
+---
+
+## 🔧 Rekomendasi Pengembangan
+
+- Tambahkan validasi `required` di input login (HTML atau JavaScript).
+- Terapkan sistem hash password dan prepared statements di backend.
+- Tambahkan fitur pencarian & pagination di daftar barang.
+- Pastikan semua aksi (edit, hapus) terlindungi dari akses tanpa login (session check).
+- Tambahkan fitur logout otomatis jika session timeout.
+
+---
+
+## 📎 Keterangan
+
+- Framework UI: Bootstrap 4.5
+- Bahasa: PHP (native, procedural)
+- Penanganan sesi: menggunakan `$_SESSION` untuk notifikasi
 
 ---
