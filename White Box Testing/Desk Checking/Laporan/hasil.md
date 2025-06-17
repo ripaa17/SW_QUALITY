@@ -1,4 +1,4 @@
-# ✅ Hasil Uji (Test Case) - Proses Transaksi Penjualan
+# Proses Transaksi Penjualan
 
 ## 📄 Deskripsi
 Pengujian proses transaksi yang mencakup penyimpanan data transaksi dan detailnya ke dalam database serta penghitungan otomatis uang kembali menggunakan metode desk checking.
