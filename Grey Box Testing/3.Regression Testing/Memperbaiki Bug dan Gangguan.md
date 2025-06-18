@@ -1,4 +1,19 @@
 # Pengujian Regression Testing
+Gray Box Testing juga mengalami Bug dan Gangguan pada Penambahan barang, tetapi barang sudah bisa ditambahkan dan ada pada list barang namun ada warning ketika barang sudah ditambahkan ke list barang
+## 🧪 Regression Testing – Fitur Penambahan Barang
+
+| No | Langkah Uji                                         | Deskripsi                                              | Hasil Sebelum Perbaikan                     | Hasil Setelah Perbaikan                     |
+|----|-----------------------------------------------------|--------------------------------------------------------|---------------------------------------------|---------------------------------------------|
+| 1  | Akses halaman tambah barang                         | Klik menu **Barang > Tambah Barang**                  | Form tampil, tetapi error saat submit       | ✅ Form tampil tanpa error                  |
+| 2  | Submit form dengan data lengkap                     | Isi semua field: Nama, Kode, Harga, Jumlah            | 🔴 Gagal simpan, muncul warning `headers sent` | ✅ Data berhasil disimpan ke database       |
+| 3  | Periksa isi database setelah submit                 | Cek tabel `barang` di database                        | ❌ Tidak ada data baru                      | ✅ Data baru muncul di tabel                |
+| 4  | Redirect setelah berhasil simpan                    | Harus diarahkan ke daftar barang / tampil alert       | ❌ Tidak redirect (karena error header)      | ✅ Redirect ke halaman list barang       
+
+
+
+
+
+# Pengujian Regression Testing
 Pengujian **Regression Testing** dilakukan setelah perbaikan bug dan gangguan pada konfigurasi **XAMPP**, yang sebelumnya menyebabkan fitur **Cetak Barcode** pada halaman **List Barang** tidak dapat berfungsi dengan semestinya setelah proses penambahan data barang baru pada aplikasi web kasir.
 
 ## Langkah-Langkah Pengujian
