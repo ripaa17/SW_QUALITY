@@ -2,7 +2,7 @@
 **(White Box, Black Box, dan Gray Box)**
 
 ## 📝 Deskripsi Proyek
-Proyek ini merupakan aplikasi kasir sederhana berbasis Java yang dikembangkan sebagai bagian dari tugas **Ujian Akhir Semester (UAS)** mata kuliah *Software Quality*. Aplikasi ini mencakup fitur dasar transaksi penjualan, penghitungan total harga, dan pencatatan item belanja.
+Proyek ini merupakan aplikasi kasir sederhana berbasis React Native yang dikembangkan sebagai bagian dari tugas **Ujian Akhir Semester (UAS)** mata kuliah *Software Quality*. Aplikasi ini mencakup fitur dasar transaksi penjualan, penghitungan total harga, dan pencatatan item belanja.
 
 ---
 
