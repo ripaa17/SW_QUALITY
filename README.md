@@ -57,10 +57,10 @@ Metode pengujian berbasis input-output tanpa melihat kode:
 
 - **Boundary Value Analysis**
   - Equivalence Partitioning
--** Decission Table Testing
-- Behaviour Testing
-- Robusnest Testing
-- Coust Efect Relationship Testing
+-**Decission Table Testing***
+- **Behaviour Testing**
+- **Robusnest Testing***
+- **Coust Efect Relationship Testing**
 **
 ---
 
