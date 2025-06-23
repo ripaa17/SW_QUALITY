@@ -9,7 +9,7 @@ Gray Box Testing juga mengalami Bug dan Gangguan pada Penambahan barang, tetapi 
 | 3  | Periksa isi database setelah submit                 | Cek tabel `barang` di database                        | ❌ Tidak ada data baru                      | ✅ Data baru muncul di tabel                |
 | 4  | Redirect setelah berhasil simpan                    | Harus diarahkan ke daftar barang / tampil alert       | ❌ Tidak redirect (karena error header)      | ✅ Redirect ke halaman list barang       
 
-
+Pada tabel diatas adalah pengujian grey box testing yang sudah dilakukan dengan 4 langkah uji sehingga hasilnya valid.
 
 
 
