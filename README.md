@@ -48,11 +48,7 @@ Metode pengujian yang digunakan:
 Metode pengujian internal berbasis kode sumber:
 
 - **Desk Checking**
-- **Code Walkthrough & Formal Inspection**
 - **Control Flow Testing**
-  - Basic Path Testing
-- **Data Flow Testing**
-  - Loop Testing
 
 ---
 
@@ -61,15 +57,11 @@ Metode pengujian berbasis input-output tanpa melihat kode:
 
 - **Boundary Value Analysis**
   - Equivalence Partitioning
-- **Comparison Testing**
-  - Decision Table Testing
-- **Sample Testing**
-  - Robustness Testing
-- **Behaviour Testing**
-  - Performance Testing
-- **Endurance Testing**
-  - Cause-Effect Relationship Testing
-
+-** Decission Table Testing
+- Behaviour Testing
+- Robusnest Testing
+- Coust Efect Relationship Testing
+**
 ---
 
 ### ✅ 3. Gray Box Testing
